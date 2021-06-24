@@ -1,0 +1,295 @@
+@charset "UTF-8";
+/* 共通 */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+.main {
+  margin: 50px auto 30px;
+}
+
+/* ヘッダー */
+.header {
+  font-family: "Cabin", sans-serif;
+  -webkit-box-shadow: 0px 8px 16px -2px rgba(10, 10, 10, 0.1), 0px -3px 10px 2px rgba(10, 10, 10, 0.2);
+          box-shadow: 0px 8px 16px -2px rgba(10, 10, 10, 0.1), 0px -3px 10px 2px rgba(10, 10, 10, 0.2);
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: #000;
+  z-index: 30;
+}
+
+.header__nav {
+  background-color: #000;
+  position: absolute;
+  width: 100%;
+  bottom: -110vh;
+  height: 100vh;
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+.header__nav::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 60px;
+  background: #000;
+  position: absolute;
+  top: -60px;
+  -webkit-clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%);
+}
+
+.header__nav h1 {
+  color: #fff;
+  background: -webkit-linear-gradient(90deg, #233 10%, #000 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 180px;
+  overflow: hidden;
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+}
+
+.header__nav__list {
+  text-align: center;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  opacity: 0;
+  width: 80%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.header__nav__list li {
+  border-bottom: dashed 1px #233;
+}
+
+.header__nav__list a {
+  font-size: 20px;
+  letter-spacing: 5px;
+  line-height: 30px;
+  color: #fff;
+}
+
+.header__nav-content {
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+}
+
+.header__nav-content a {
+  display: inline-block;
+}
+
+.header__nav-content a img {
+  width: 30px;
+  margin: 10px;
+}
+
+.header__nav-content p {
+  margin-top: 10px;
+  color: #233;
+}
+
+.header__nav-content small {
+  font-size: 12px;
+  display: block;
+  color: #fff;
+  bottom: 0;
+}
+
+.header .menu-btn {
+  z-index: 110;
+  display: block;
+  position: absolute;
+  bottom: 15px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.header .menu-btn-line {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #ffffff;
+  -webkit-transition: 1s;
+  transition: 1s;
+  border-radius: 4px;
+}
+
+.header .menu-btn #line1 {
+  top: 0;
+}
+
+.header .menu-btn #line2 {
+  top: 14px;
+}
+
+.header .menu-btn #line3 {
+  bottom: 0;
+}
+
+.header .nav__list-in {
+  left: 50%;
+  opacity: 1;
+}
+
+.header .in {
+  -webkit-transform: translateY(-110vh);
+          transform: translateY(-110vh);
+}
+
+.header .line_1 {
+  -webkit-transform: translateY(10px) rotate(-45deg);
+          transform: translateY(10px) rotate(-45deg);
+}
+
+.header .line_2 {
+  opacity: 0;
+}
+
+.header .line_3 {
+  -webkit-transform: translateY(-18px) rotate(45deg);
+          transform: translateY(-18px) rotate(45deg);
+}
+
+.author {
+  font-family: "Cabin", sans-serif;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 200px;
+  color: #000;
+  -webkit-clip-path: polygon(0 0, 70% 0, 25% 100%, 0% 100%);
+  clip-path: polygon(0 0, 70% 0, 25% 100%, 0% 100%);
+}
+
+.author h2 {
+  font-size: 100px;
+  line-height: 80px;
+}
+
+.author p {
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.title {
+  font-family: "Cabin", sans-serif;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  color: #fff;
+  background: #000;
+  -webkit-clip-path: polygon(70% 0, 100% 0, 100% 100%, 25% 100%);
+  clip-path: polygon(70% 0, 100% 0, 100% 100%, 25% 100%);
+  text-align: right;
+}
+
+.title h2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 100px;
+}
+
+.title p {
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.main__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 200px 0 0 0;
+}
+
+.main__img__list {
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  height: 200px;
+  position: relative;
+  margin: 5px auto;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.main__img .active {
+  -webkit-filter: initial;
+          filter: initial;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.main__img a img {
+  width: 100%;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.main__img a img:hover {
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/* フッター */
+footer {
+  background: #233;
+  color: #fff;
+  text-align: center;
+  height: 500px;
+}
+
+/* インスタ */
+/*# sourceMappingURL=style.css.map */
